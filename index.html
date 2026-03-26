@@ -9,25 +9,25 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0f110f;
-      --bg-secondary: #161916;
-      --surface: #1c201c;
-      --glass: rgba(24, 30, 24, 0.6);
-      --glass-border: rgba(255,255,255,0.05);
-      --glass-hover: rgba(255,255,255,0.07);
-      --primary: #10b981;
-      --primary-light: #34d399;
-      --primary-glow: rgba(16,185,129,0.10);
-      --primary-glow-strong: rgba(16,185,129,0.22);
-      --accent: #06b6d4;
-      --text: #e8ece8;
-      --text-secondary: #9ca89c;
-      --text-muted: #687068;
-      --border: rgba(255,255,255,0.05);
-      --border-hover: rgba(255,255,255,0.10);
-      --shadow: 0 4px 6px -1px rgba(0,0,0,0.35), 0 2px 4px -2px rgba(0,0,0,0.25);
-      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.45), 0 4px 6px -4px rgba(0,0,0,0.35);
-      --shadow-glow: 0 0 40px rgba(16,185,129,0.06);
+      --bg: #f5f5f0;
+      --bg-secondary: #eeeee8;
+      --surface: #ffffff;
+      --glass: rgba(255, 255, 255, 0.65);
+      --glass-border: rgba(0,0,0,0.07);
+      --glass-hover: rgba(255,255,255,0.85);
+      --primary: #3758c7;
+      --primary-light: #4a6bdb;
+      --primary-glow: rgba(55,88,199,0.06);
+      --primary-glow-strong: rgba(55,88,199,0.12);
+      --accent: #6d4fc4;
+      --text: #1e2333;
+      --text-secondary: #4a5063;
+      --text-muted: #5c6178;
+      --border: rgba(0,0,0,0.07);
+      --border-hover: rgba(0,0,0,0.13);
+      --shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+      --shadow-lg: 0 8px 24px -4px rgba(0,0,0,0.08), 0 4px 8px -4px rgba(0,0,0,0.04);
+      --shadow-glow: 0 0 30px rgba(55,88,199,0.05);
     }
 
     html { scroll-behavior: smooth; }
@@ -54,9 +54,9 @@
       pointer-events: none;
       z-index: 0;
       background:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16,185,129,0.06), transparent),
-        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(6,182,212,0.04), transparent),
-        radial-gradient(ellipse 50% 30% at 10% 90%, rgba(16,185,129,0.03), transparent);
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(55,88,199,0.05), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(109,79,196,0.03), transparent),
+        radial-gradient(ellipse 50% 30% at 10% 90%, rgba(55,88,199,0.03), transparent);
     }
 
     /* ── LAYOUT ── */
@@ -73,7 +73,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 14px 28px;
-      background: rgba(15, 17, 15, 0.7);
+      background: rgba(245, 245, 240, 0.8);
       backdrop-filter: blur(20px) saturate(1.4);
       -webkit-backdrop-filter: blur(20px) saturate(1.4);
       border: 1px solid var(--glass-border);
@@ -104,7 +104,7 @@
       border-radius: 8px;
       overflow: hidden;
       margin-left: 20px;
-      box-shadow: 0 0 12px rgba(16,185,129,0.15);
+      box-shadow: 0 0 12px rgba(55,88,199,0.15);
     }
     .lang-btn {
       padding: 6px 14px;
@@ -144,7 +144,7 @@
       width: 8px; height: 8px;
       background: var(--primary);
       border-radius: 50%;
-      box-shadow: 0 0 12px var(--primary);
+      box-shadow: 0 0 8px rgba(55,88,199,0.25);
     }
     h1 {
       font-family: 'Outfit', sans-serif;
@@ -158,10 +158,7 @@
       animation: fadeUp 0.6s 0.2s forwards;
     }
     .text-gradient {
-      background: linear-gradient(135deg, var(--primary-light), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
     }
     .hero-desc {
       color: var(--text-secondary);
@@ -184,14 +181,14 @@
     .tag {
       background: var(--primary-glow);
       color: var(--primary-light);
-      border: 1px solid rgba(16,185,129,0.15);
+      border: 1px solid rgba(55,88,199,0.12);
       padding: 6px 16px;
       border-radius: 100px;
       font-size: 12px;
       font-weight: 500;
       transition: all 0.2s;
     }
-    .tag:hover { background: var(--primary-glow-strong); border-color: rgba(16,185,129,0.3); }
+    .tag:hover { background: var(--primary-glow-strong); border-color: rgba(55,88,199,0.25); }
     .hero-btns {
       display: flex;
       gap: 12px;
@@ -215,9 +212,9 @@
       background: var(--primary);
       color: #fff;
       border: none;
-      box-shadow: 0 4px 14px rgba(16,185,129,0.3);
+      box-shadow: 0 4px 14px rgba(55,88,199,0.2);
     }
-    .btn-primary:hover { background: var(--primary-light); box-shadow: 0 4px 20px rgba(16,185,129,0.4); transform: translateY(-1px); }
+    .btn-primary:hover { background: var(--primary-light); box-shadow: 0 4px 20px rgba(55,88,199,0.3); transform: translateY(-1px); }
     .btn-ghost {
       background: var(--glass);
       color: var(--text-secondary);
@@ -227,7 +224,7 @@
     .btn-ghost:hover { background: var(--glass-hover); border-color: var(--border-hover); color: var(--text); }
 
     /* ── SECTIONS ── */
-    section { padding: 100px 0; }
+    section { padding: 56px 0; }
     .section-eyebrow {
       display: inline-flex;
       align-items: center;
@@ -251,7 +248,7 @@
       font-weight: 700;
       line-height: 1.15;
       letter-spacing: -0.02em;
-      margin-bottom: 48px;
+      margin-bottom: 28px;
     }
 
     /* ── GLASS CARD ── */
@@ -314,6 +311,8 @@
       position: relative;
     }
     .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg), var(--shadow-glow); }
+    .project-card:nth-child(3) { grid-row: span 2; }
+    .project-card:nth-child(n+6) { grid-column: 1 / -1; }
     .project-num {
       font-family: 'Outfit', sans-serif;
       font-size: 12px;
@@ -359,6 +358,15 @@
       transition: all 0.2s;
     }
     .project-card:hover .project-arrow { color: var(--primary-light); transform: translate(2px, -2px); }
+    .project-video {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      background: var(--bg-secondary);
+      object-fit: contain;
+      pointer-events: auto;
+    }
+    .project-card .project-video { position: relative; z-index: 2; }
 
     /* ── PUBLICATIONS ── */
     .pub-list { display: flex; flex-direction: column; gap: 12px; }
@@ -406,7 +414,7 @@
       transition: color 0.2s;
     }
     .skill-list li:hover { color: var(--text-secondary); }
-    .skill-list li::before { content: '\2192\00a0\00a0'; color: rgba(16,185,129,0.3); font-size: 12px; }
+    .skill-list li::before { content: '\2192\00a0\00a0'; color: rgba(55,88,199,0.3); font-size: 12px; }
 
     /* ── EXPERIENCE ── */
     .timeline { position: relative; padding-left: 32px; }
@@ -415,7 +423,7 @@
       position: absolute;
       left: 7px; top: 8px; bottom: 8px;
       width: 2px;
-      background: linear-gradient(180deg, var(--primary), rgba(16,185,129,0.1));
+      background: linear-gradient(180deg, var(--primary), rgba(55,88,199,0.1));
       border-radius: 1px;
     }
     .timeline-item {
@@ -425,12 +433,12 @@
     .timeline-item:last-child { padding-bottom: 0; }
     .timeline-dot {
       position: absolute;
-      left: -28px; top: 6px;
+      left: -32px; top: 6px;
       width: 16px; height: 16px;
       border-radius: 50%;
-      background: var(--bg);
+      background: #fff;
       border: 3px solid var(--primary);
-      box-shadow: 0 0 10px rgba(16,185,129,0.3);
+      box-shadow: 0 0 8px rgba(55,88,199,0.25);
     }
     .timeline-date {
       font-size: 12px;
@@ -498,21 +506,67 @@
     .reveal.visible { opacity: 1; transform: none; }
 
     /* ── RESPONSIVE ── */
+    /* ── MOBILE MENU ── */
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 22px;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 50%; transform: translateX(-50%);
+      width: calc(100% - 32px);
+      max-width: 1100px;
+      z-index: 99;
+      background: rgba(245, 245, 240, 0.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: var(--shadow-lg);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      display: block;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--text); }
+
     @media (max-width: 768px) {
       .container { padding: 0 20px; }
-      nav { width: calc(100% - 16px); top: 8px; padding: 12px 20px; border-radius: 12px; }
-      .nav-links { gap: 16px; }
-      .nav-links a { font-size: 12px; }
+      nav { width: calc(100% - 16px); top: 8px; padding: 12px 16px; border-radius: 12px; }
+      .nav-links { display: none; }
+      .menu-btn { display: block; }
+      .nav-right { gap: 8px; }
+      .lang-toggle { margin-left: 0; }
       .about-stats { flex-direction: column; }
       .projects-grid { grid-template-columns: 1fr; }
+      .project-card:nth-child(3) { grid-row: auto; }
+      .project-card:nth-child(n+6) { grid-column: auto; }
       .skills-grid { grid-template-columns: 1fr 1fr; }
       .timeline { padding-left: 28px; }
       .contact-card { padding: 32px 24px; }
     }
     @media (max-width: 480px) {
       .skills-grid { grid-template-columns: 1fr; }
-      .nav-links { gap: 10px; }
       .hero-btns { flex-direction: column; }
+      .mobile-menu { top: 64px; width: calc(100% - 16px); }
     }
   </style>
 </head>
@@ -535,8 +589,16 @@
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
       <button class="lang-btn" onclick="setLang('kr')">KR</button>
     </div>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()" data-lang="en">About</a><a href="#about" onclick="closeMenu()" data-lang="kr">소개</a>
+  <a href="#projects" onclick="closeMenu()" data-lang="en">Projects</a><a href="#projects" onclick="closeMenu()" data-lang="kr">프로젝트</a>
+  <a href="#publications" onclick="closeMenu()" data-lang="en">Papers</a><a href="#publications" onclick="closeMenu()" data-lang="kr">논문</a>
+  <a href="#experience" onclick="closeMenu()" data-lang="en">Experience</a><a href="#experience" onclick="closeMenu()" data-lang="kr">경력</a>
+  <a href="#contact" onclick="closeMenu()" data-lang="en">Contact</a><a href="#contact" onclick="closeMenu()" data-lang="kr">연락처</a>
+</div>
 
 <div class="container">
 
@@ -545,8 +607,8 @@
     <div class="hero-eyebrow" data-lang="en"><span class="dot"></span> AI Researcher &amp; Ph.D. in Computer Engineering</div>
     <div class="hero-eyebrow" data-lang="kr"><span class="dot"></span> AI 연구원 &amp; 컴퓨터 공학 박사</div>
     <h1>David<br><span class="text-gradient">Ishak Kosasih</span></h1>
-    <p class="hero-desc" data-lang="en">I build AI systems that run on edge devices &mdash; from dashcam accident detection to real-time drone tracking. 7+ years of deep learning research.</p>
-    <p class="hero-desc" data-lang="kr">엣지 디바이스에서 동작하는 AI 시스템을 개발합니다 &mdash; 대시캠 사고 탐지부터 실시간 드론 추적까지. 7년 이상의 딥러닝 연구 경험.</p>
+    <p class="hero-desc" data-lang="en">I build AI systems that run on edge devices - from dashcam accident detection to real-time drone tracking. With 7+ years of deep learning research, my work spans anomaly detection, representation learning, and spatiotemporal video understanding. I've contributed to NRF-funded healthcare AI research and currently develop on-device video intelligence optimized for embedded hardware like NVIDIA Jetson and Radxa CM5.</p>
+    <p class="hero-desc" data-lang="kr">엣지 디바이스에서 동작하는 AI 시스템을 개발합니다 - 대시캠 사고 탐지부터 실시간 드론 추적까지. 7년 이상의 딥러닝 연구 경험을 바탕으로, 이상 탐지, 표현 학습, 스페이시오템포럴 비디오 이해 분야에서 연구해왔습니다. NRF 지원 AI 헬스케어 연구에 기여하고 현재 NVIDIA Jetson 및 Radxa CM5 등 임베디드 하드웨어에 최적화된 온디바이스 비디오 인텔리전스를 개발하고 있습니다.</p>
     <div class="hero-tags">
       <span class="tag" data-lang="en">Computer Vision</span>
       <span class="tag" data-lang="en">Edge AI</span>
@@ -576,7 +638,7 @@
       <div class="reveal" data-lang="en">
         <p>I'm <strong>David Ishak Kosasih</strong>, a deep learning researcher specializing in <strong>anomaly detection, representation learning, and computer vision</strong>. My work focuses on bringing AI models from the lab to real-world edge devices.</p>
         <p>I earned my <strong>Ph.D. in Computer Engineering</strong> from Dongseo University, where I contributed to an NRF-funded AI healthcare research project and proposed a novel loss function for Siamese-based representation learning.</p>
-        <p>Currently at <strong>OnD AI</strong>, I develop on-device video intelligence systems &mdash; optimizing spatiotemporal deep learning models for real-time inference on embedded hardware like NVIDIA Jetson and Radxa CM5.</p>
+        <p>Currently at <strong>OnD AI</strong>, I develop on-device video intelligence systems - optimizing spatiotemporal deep learning models for real-time inference on embedded hardware like NVIDIA Jetson and Radxa CM5.</p>
       </div>
       <div class="reveal" data-lang="kr">
         <p>저는 <strong>이상 탐지, 표현 학습, 컴퓨터 비전</strong>을 전문으로 하는 딥러닝 연구자 <strong>데이비드 이삭 코사시</strong>입니다. AI 모델을 연구실에서 실제 엣지 디바이스로 가져오는 일에 집중하고 있습니다.</p>
@@ -609,10 +671,16 @@
       <a class="project-card glass-card reveal" href="https://github.com/ishakdavidk/ego_accident_detection_yolo" target="_blank">
         <div class="project-arrow">&nearr;</div>
         <div class="project-num">01</div>
-        <div class="project-name" data-lang="en">Accident Detection &mdash; YOLOv11</div>
-        <div class="project-name" data-lang="kr">사고 탐지 &mdash; YOLOv11</div>
-        <div class="project-highlight" data-lang="en">Edge Deployed &mdash; Radxa CM5 + Jetson</div>
-        <div class="project-highlight" data-lang="kr">엣지 배포 &mdash; Radxa CM5 + Jetson</div>
+        <div class="project-name" data-lang="en">Accident Detection - YOLOv11</div>
+        <div class="project-name" data-lang="kr">사고 탐지 - YOLOv11</div>
+        <div class="project-highlight" data-lang="en">Edge Deployed - Radxa CM5 + Jetson</div>
+        <div class="project-highlight" data-lang="kr">엣지 배포 - Radxa CM5 + Jetson</div>
+        <div class="video-thumbnail" style="position:relative; aspect-ratio:16/9; border-radius:8px; margin-bottom:16px; overflow:hidden; cursor:pointer;" onclick="window.open('https://youtu.be/gaxsCEG30dc','_blank'); event.preventDefault(); event.stopPropagation();">
+          <img src="https://img.youtube.com/vi/gaxsCEG30dc/hqdefault.jpg" alt="Demo video" style="width:100%; height:100%; object-fit:cover;">
+          <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.25);">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="rgba(0,0,0,0.55)"/><polygon points="22,18 22,38 40,28" fill="#fff"/></svg>
+          </div>
+        </div>
         <div class="project-desc" data-lang="en">End-to-end dashcam accident detection with full edge deployment. Two-stage YOLOv11s training at 1024x1024, model conversion to RKNN for NPU acceleration, 4K camera input, event recording, GPIO alerts, and live MJPEG streaming.</div>
         <div class="project-desc" data-lang="kr">엣지 디바이스에 완전 배포 가능한 대시캠 사고 탐지 시스템. YOLOv11s 2단계 학습(1024x1024), RKNN NPU 가속을 위한 모델 변환, 4K 카메라 입력, 이벤트 녹화, GPIO 알림, 실시간 MJPEG 스트리밍.</div>
         <div class="project-stack">
@@ -626,10 +694,11 @@
       <a class="project-card glass-card reveal" href="https://github.com/ishakdavidk/ego_accident_detection_r2plus1d" target="_blank">
         <div class="project-arrow">&nearr;</div>
         <div class="project-num">02</div>
-        <div class="project-name" data-lang="en">Accident Detection &mdash; 3D CNN</div>
-        <div class="project-name" data-lang="kr">사고 탐지 &mdash; 3D CNN</div>
-        <div class="project-highlight" data-lang="en">Spatiotemporal &mdash; R(2+1)D on Jetson</div>
-        <div class="project-highlight" data-lang="kr">스페이시오템포럴 &mdash; Jetson에서 R(2+1)D</div>
+        <div class="project-name" data-lang="en">Accident Detection - 3D CNN</div>
+        <div class="project-name" data-lang="kr">사고 탐지 - 3D CNN</div>
+        <div class="project-highlight" data-lang="en">Spatiotemporal - R(2+1)D on Jetson</div>
+        <div class="project-highlight" data-lang="kr">스페이시오템포럴 - Jetson에서 R(2+1)D</div>
+        <video class="project-video" src="https://github.com/user-attachments/assets/b7ff5ba4-36f8-4a55-a72a-2d5f49950806" autoplay muted loop playsinline loading="lazy"></video>
         <div class="project-desc" data-lang="en">Video-level accident classification using R(2+1)D-18 3D CNN trained on DoTA dataset. Deployed on NVIDIA Jetson with dual cameras, FP16 inference, and automatic accident clip saving with live MJPEG streaming.</div>
         <div class="project-desc" data-lang="kr">DoTA 데이터셋으로 학습된 R(2+1)D-18 3D CNN을 활용한 비디오 수준 사고 분류. NVIDIA Jetson에서 듀얼 카메라, FP16 추론, 자동 사고 클립 저장 및 실시간 MJPEG 스트리밍 지원.</div>
         <div class="project-stack">
@@ -645,10 +714,11 @@
         <div class="project-num">03</div>
         <div class="project-name" data-lang="en">Real-Time Fight Detection</div>
         <div class="project-name" data-lang="kr">실시간 폭력 탐지</div>
-        <div class="project-highlight" data-lang="en">98.99% F1 Score &mdash; Vision Transformer</div>
-        <div class="project-highlight" data-lang="kr">98.99% F1 점수 &mdash; 비전 트랜스포머</div>
-        <div class="project-desc" data-lang="en">Fine-tuned VideoMAE v2 (ViT-Base) on the RWF-2000 dataset for real-time violence detection in live video. Only the last 2 transformer blocks are unfrozen (~14.2M of 86.2M params), achieving near-perfect accuracy.</div>
-        <div class="project-desc" data-lang="kr">RWF-2000 데이터셋에서 VideoMAE v2 (ViT-Base)를 파인튜닝하여 실시간 폭력 탐지. 마지막 2개 트랜스포머 블록만 언프리즈하여(~14.2M/86.2M 파라미터) 거의 완벽한 정확도 달성.</div>
+        <div class="project-highlight" data-lang="en">Live Video Analysis - VideoMAE v2</div>
+        <div class="project-highlight" data-lang="kr">실시간 영상 분석 - VideoMAE v2</div>
+        <video class="project-video" src="https://github.com/user-attachments/assets/0c32391e-d327-4b8c-a1cf-4036eb3ca12f" autoplay muted loop playsinline loading="lazy"></video>
+        <div class="project-desc" data-lang="en">Fine-tuned VideoMAE v2 (ViT-Base) on the RWF-2000 dataset for real-time violence detection in live video, achieving 98.99% F1 score. Only the last 2 transformer blocks are unfrozen (~14.2M of 86.2M params) for efficient training.</div>
+        <div class="project-desc" data-lang="kr">RWF-2000 데이터셋에서 VideoMAE v2 (ViT-Base)를 파인튜닝하여 실시간 폭력 탐지, 98.99% F1 점수 달성. 마지막 2개 트랜스포머 블록만 언프리즈하여(~14.2M/86.2M 파라미터) 효율적으로 학습.</div>
         <div class="project-stack">
           <span class="stack-pill">PyTorch</span>
           <span class="stack-pill">VideoMAE v2</span>
@@ -662,8 +732,8 @@
         <div class="project-num">04</div>
         <div class="project-name" data-lang="en">Co-Location Detection</div>
         <div class="project-name" data-lang="kr">공동 위치 탐지</div>
-        <div class="project-highlight" data-lang="en">Published &mdash; Sensors Journal 2021</div>
-        <div class="project-highlight" data-lang="kr">출판 &mdash; Sensors 저널 2021</div>
+        <div class="project-highlight" data-lang="en">Published - Sensors Journal 2021</div>
+        <div class="project-highlight" data-lang="kr">출판 - Sensors 저널 2021</div>
         <div class="project-desc" data-lang="en">Detecting whether mobile devices share the same physical location using magnetometer data and autoencoders. Built Dense AE and Convolutional AE architectures, plus an Android app for data collection.</div>
         <div class="project-desc" data-lang="kr">자기장 센서 데이터와 오토인코더를 활용하여 모바일 기기가 같은 물리적 위치에 있는지 탐지. Dense AE와 Convolutional AE 아키텍처 및 데이터 수집용 Android 앱 개발.</div>
         <div class="project-stack">
@@ -676,8 +746,8 @@
       <a class="project-card glass-card reveal" href="https://github.com/ishakdavidk/Reinforcement-Learning" target="_blank">
         <div class="project-arrow">&nearr;</div>
         <div class="project-num">05</div>
-        <div class="project-name" data-lang="en">DQN Agent &mdash; RoboCop 3</div>
-        <div class="project-name" data-lang="kr">DQN 에이전트 &mdash; RoboCop 3</div>
+        <div class="project-name" data-lang="en">DQN Agent - RoboCop 3</div>
+        <div class="project-name" data-lang="kr">DQN 에이전트 - RoboCop 3</div>
         <div class="project-desc" data-lang="en">Deep Q-Network agent that learns to play RoboCop 3 on Sega Genesis. 4-layer CNN with experience replay, target network, and custom reward shaping. Trained over 1,300 episodes.</div>
         <div class="project-desc" data-lang="kr">세가 제네시스에서 RoboCop 3를 학습하는 Deep Q-Network 에이전트. 4층 CNN, 경험 재생, 타겟 네트워크, 커스텀 보상 함수 적용. 1,300 에피소드 이상 학습.</div>
         <div class="project-stack">
@@ -755,21 +825,22 @@
         <ul class="skill-list">
           <li>PyTorch</li>
           <li>TensorFlow</li>
-          <li>HuggingFace</li>
-          <li>Vision Transformers</li>
-          <li>3D CNN (R(2+1)D)</li>
+          <li>Sequence Models (RNN/LSTM/GRU)</li>
           <li>GANs / VAEs</li>
+          <li>Siamese Networks</li>
+          <li>Autoencoders</li>
         </ul>
       </div>
       <div class="skill-card glass-card reveal">
         <div class="skill-title" data-lang="en">Computer Vision</div>
         <div class="skill-title" data-lang="kr">컴퓨터 비전</div>
         <ul class="skill-list">
-          <li>YOLOv11</li>
-          <li>VideoMAE v2</li>
+          <li>YOLO</li>
+          <li>Vision Transformers / VideoMAE v2</li>
+          <li>3D CNN (R(2+1)D, SlowFast)</li>
           <li>OpenCV</li>
           <li>Action Recognition</li>
-          <li>Video Understanding</li>
+          <li>Object Detection</li>
         </ul>
       </div>
       <div class="skill-card glass-card reveal">
@@ -790,7 +861,7 @@
         <ul class="skill-list">
           <li>Python</li>
           <li>Java / Android</li>
-          <li>JavaScript / Node.js</li>
+          <li>SQL</li>
           <li>Linux / Server Admin</li>
           <li>Git / GitHub</li>
         </ul>
@@ -802,7 +873,7 @@
           <li>Representation Learning</li>
           <li>Anomaly Detection</li>
           <li>Website Fingerprinting</li>
-          <li>Time Series (LSTM)</li>
+          <li>Time Series Analysis</li>
           <li>Graph Neural Networks</li>
         </ul>
       </div>
@@ -830,55 +901,55 @@
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2025 &mdash; Present</div>
+        <div class="timeline-date">2025 - Present</div>
         <div class="timeline-role" data-lang="en">AI Researcher</div>
         <div class="timeline-role" data-lang="kr">AI 연구원</div>
-        <div class="timeline-company" data-lang="en">OnD AI &mdash; Gyeonggi-do, South Korea</div>
-        <div class="timeline-company" data-lang="kr">OnD AI &mdash; 대한민국, 경기도</div>
+        <div class="timeline-company" data-lang="en">OnD AI - Gyeonggi-do, South Korea</div>
+        <div class="timeline-company" data-lang="kr">OnD AI - 대한민국, 경기도</div>
         <div class="timeline-desc" data-lang="en">Developing on-device dashcam accident detection using spatiotemporal deep learning for edge devices. Designing drone detection pipelines with real-time computer vision models.</div>
         <div class="timeline-desc" data-lang="kr">스페이시오템포럴 딥러닝을 활용한 엣지 디바이스 기반 대시캠 사고 탐지 시스템 개발. 실시간 컴퓨터 비전 모델을 활용한 드론 탐지 파이프라인 설계.</div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2024 &mdash; 2025</div>
+        <div class="timeline-date">2024 - 2025</div>
         <div class="timeline-role" data-lang="en">Postdoctoral Researcher</div>
         <div class="timeline-role" data-lang="kr">박사후 연구원</div>
-        <div class="timeline-company" data-lang="en">Ewha Womans University &mdash; Seoul</div>
-        <div class="timeline-company" data-lang="kr">이화여자대학교 &mdash; 서울</div>
+        <div class="timeline-company" data-lang="en">Ewha Womans University - Seoul</div>
+        <div class="timeline-company" data-lang="kr">이화여자대학교 - 서울</div>
         <div class="timeline-desc" data-lang="en">Researched Tor website fingerprinting using deep learning. Collected and analyzed TCP data of encrypted Tor traffic for security analysis.</div>
         <div class="timeline-desc" data-lang="kr">딥러닝을 활용한 Tor 웹사이트 핑거프린팅 연구. 보안 분석을 위한 암호화된 Tor 트래픽의 TCP 데이터 수집 및 분석.</div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2021 &mdash; 2024</div>
+        <div class="timeline-date">2021 - 2024</div>
         <div class="timeline-role" data-lang="en">Ph.D. in Computer Engineering</div>
         <div class="timeline-role" data-lang="kr">박사: 컴퓨터 공학</div>
-        <div class="timeline-company" data-lang="en">Dongseo University &mdash; Busan (GPA: 4.25/4.50)</div>
-        <div class="timeline-company" data-lang="kr">동서대학교 &mdash; 부산 (GPA: 4.25/4.50)</div>
+        <div class="timeline-company" data-lang="en">Dongseo University - Busan (GPA: 4.25/4.50)</div>
+        <div class="timeline-company" data-lang="kr">동서대학교 - 부산 (GPA: 4.25/4.50)</div>
         <div class="timeline-desc" data-lang="en">Dissertation: Similarity Constraint Loss for Siamese-based Representation Learning Optimization. Research on representation learning, generative networks, and website fingerprinting.</div>
         <div class="timeline-desc" data-lang="kr">논문: Siamese 기반 표현 학습 최적화를 위한 유사성 제약 손실. 표현 학습, 생성 모델, 웹사이트 핑거프린팅 연구.</div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2019 &mdash; 2021</div>
+        <div class="timeline-date">2019 - 2021</div>
         <div class="timeline-role" data-lang="en">M.Sc. in Computer Engineering</div>
         <div class="timeline-role" data-lang="kr">석사: 컴퓨터 공학</div>
-        <div class="timeline-company" data-lang="en">Dongseo University &mdash; Busan (GPA: 4.31/4.50)</div>
-        <div class="timeline-company" data-lang="kr">동서대학교 &mdash; 부산 (GPA: 4.31/4.50)</div>
+        <div class="timeline-company" data-lang="en">Dongseo University - Busan (GPA: 4.31/4.50)</div>
+        <div class="timeline-company" data-lang="kr">동서대학교 - 부산 (GPA: 4.31/4.50)</div>
         <div class="timeline-desc" data-lang="en">NRF-funded project: "Secure Healthcare-Cloud Framework for AI-based Resource Management." Thesis on co-location detection using magnetometer data and autoencoders.</div>
         <div class="timeline-desc" data-lang="kr">NRF 지원 프로젝트: "AI 기반 자원 관리를 위한 보안 헬스케어 클라우드 프레임워크." 자기장 센서 데이터와 오토인코더를 활용한 공동 위치 탐지 논문.</div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2013 &mdash; 2017</div>
-        <div class="timeline-role" data-lang="en">B.Eng. in Electrical Engineering</div>
+        <div class="timeline-date">2013 - 2017</div>
+        <div class="timeline-role" data-lang="en">S.T. in Electrical Engineering</div>
         <div class="timeline-role" data-lang="kr">학사: 전기 공학</div>
-        <div class="timeline-company" data-lang="en">Petra Christian University &mdash; Surabaya (Honors, 3.54/4.00)</div>
-        <div class="timeline-company" data-lang="kr">페트라 크리스천 대학교 &mdash; 수라바야 (우등 졸업, 3.54/4.00)</div>
+        <div class="timeline-company" data-lang="en">Petra Christian University - Surabaya (Honors, 3.54/4.00)</div>
+        <div class="timeline-company" data-lang="kr">페트라 크리스천 대학교 - 수라바야 (우등 졸업, 3.54/4.00)</div>
         <div class="timeline-desc" data-lang="en">IoT parking system thesis. Telematics lab assistant for 3 years working with Arduino, Raspberry Pi, PLCs, and assembly programming.</div>
         <div class="timeline-desc" data-lang="kr">IoT 기반 주차 시스템 논문. 3년간 텔레매틱스 실험실 조교로 Arduino, Raspberry Pi, PLC, 어셈블리 프로그래밍 경험.</div>
       </div>
@@ -919,6 +990,13 @@
     });
   }
 
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
@@ -929,6 +1007,14 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+
+  // Prevent videos/iframes from triggering parent link navigation
+  document.querySelectorAll('.project-card video, .project-card iframe').forEach(el => {
+    el.addEventListener('click', e => e.preventDefault());
+    el.closest('.project-card').addEventListener('click', function(e) {
+      if (e.target.tagName === 'VIDEO' || e.target.tagName === 'IFRAME') e.preventDefault();
+    });
+  });
 </script>
 </body>
 </html>
