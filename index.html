@@ -124,10 +124,22 @@
     #hero {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      gap: 48px;
       padding-top: 100px;
       padding-bottom: 60px;
+    }
+    .hero-content { flex: 1; }
+    .hero-visual {
+      flex: 0 0 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual canvas {
+      width: 400px;
+      height: 400px;
     }
     .hero-eyebrow {
       display: inline-flex;
@@ -289,10 +301,7 @@
       margin-bottom: 8px;
     }
     .stat-num .text-gradient {
-      background: linear-gradient(135deg, var(--primary-light), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--primary);
     }
     .stat-label { font-size: 12px; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
 
@@ -549,6 +558,8 @@
     .mobile-menu a:hover { color: var(--text); }
 
     @media (max-width: 768px) {
+      #hero { flex-direction: column; }
+      .hero-visual { display: none; }
       .container { padding: 0 20px; }
       nav { width: calc(100% - 16px); top: 8px; padding: 12px 16px; border-radius: 12px; }
       .nav-links { display: none; }
@@ -576,7 +587,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#hero" class="nav-logo">David I.K.</a>
+  <a href="#hero" class="nav-logo">ishakdavidk</a>
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="kr">소개</a></li>
@@ -604,27 +615,32 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-eyebrow" data-lang="en"><span class="dot"></span> AI Researcher &amp; Ph.D. in Computer Engineering</div>
-    <div class="hero-eyebrow" data-lang="kr"><span class="dot"></span> AI 연구원 &amp; 컴퓨터 공학 박사</div>
-    <h1>David<br><span class="text-gradient">Ishak Kosasih</span></h1>
-    <p class="hero-desc" data-lang="en">I build AI systems that run on edge devices - from dashcam accident detection to real-time drone tracking. With 7+ years of deep learning research, my work spans anomaly detection, representation learning, and spatiotemporal video understanding. I've contributed to NRF-funded healthcare AI research and currently develop on-device video intelligence optimized for embedded hardware like NVIDIA Jetson and Radxa CM5.</p>
-    <p class="hero-desc" data-lang="kr">엣지 디바이스에서 동작하는 AI 시스템을 개발합니다 - 대시캠 사고 탐지부터 실시간 드론 추적까지. 7년 이상의 딥러닝 연구 경험을 바탕으로, 이상 탐지, 표현 학습, 스페이시오템포럴 비디오 이해 분야에서 연구해왔습니다. NRF 지원 AI 헬스케어 연구에 기여하고 현재 NVIDIA Jetson 및 Radxa CM5 등 임베디드 하드웨어에 최적화된 온디바이스 비디오 인텔리전스를 개발하고 있습니다.</p>
-    <div class="hero-tags">
-      <span class="tag" data-lang="en">Computer Vision</span>
-      <span class="tag" data-lang="en">Edge AI</span>
-      <span class="tag" data-lang="en">Video Understanding</span>
-      <span class="tag" data-lang="en">Deep Learning</span>
-      <span class="tag" data-lang="en">Representation Learning</span>
-      <span class="tag" data-lang="kr">컴퓨터 비전</span>
-      <span class="tag" data-lang="kr">엣지 AI</span>
-      <span class="tag" data-lang="kr">비디오 이해</span>
-      <span class="tag" data-lang="kr">딥러닝</span>
-      <span class="tag" data-lang="kr">표현 학습</span>
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-lang="en"><span class="dot"></span> AI Researcher &amp; Ph.D. in Computer Engineering</div>
+      <div class="hero-eyebrow" data-lang="kr"><span class="dot"></span> AI 연구원 &amp; 컴퓨터 공학 박사</div>
+      <h1>David<br><span class="text-gradient">Ishak Kosasih</span></h1>
+      <p class="hero-desc" data-lang="en">I build AI systems that run on edge devices - from dashcam accident detection to real-time drone tracking. With 7+ years of deep learning research, my work spans anomaly detection, representation learning, and spatiotemporal video understanding. I've contributed to NRF-funded healthcare AI research and currently develop on-device video intelligence optimized for embedded hardware like NVIDIA Jetson and Radxa CM5.</p>
+      <p class="hero-desc" data-lang="kr">엣지 디바이스에서 동작하는 AI 시스템을 개발합니다 - 대시캠 사고 탐지부터 실시간 드론 추적까지. 7년 이상의 딥러닝 연구 경험을 바탕으로, 이상 탐지, 표현 학습, 스페이시오템포럴 비디오 이해 분야에서 연구해왔습니다. NRF 지원 AI 헬스케어 연구에 기여하고 현재 NVIDIA Jetson 및 Radxa CM5 등 임베디드 하드웨어에 최적화된 온디바이스 비디오 인텔리전스를 개발하고 있습니다.</p>
+      <div class="hero-tags">
+        <span class="tag" data-lang="en">Computer Vision</span>
+        <span class="tag" data-lang="en">Edge AI</span>
+        <span class="tag" data-lang="en">Video Understanding</span>
+        <span class="tag" data-lang="en">Deep Learning</span>
+        <span class="tag" data-lang="en">Representation Learning</span>
+        <span class="tag" data-lang="kr">컴퓨터 비전</span>
+        <span class="tag" data-lang="kr">엣지 AI</span>
+        <span class="tag" data-lang="kr">비디오 이해</span>
+        <span class="tag" data-lang="kr">딥러닝</span>
+        <span class="tag" data-lang="kr">표현 학습</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary" data-lang="en">View Projects &rarr;</a>
+        <a href="#projects" class="btn btn-primary" data-lang="kr">프로젝트 보기 &rarr;</a>
+        <a href="https://github.com/ishakdavidk" class="btn btn-ghost" target="_blank">GitHub &nearr;</a>
+      </div>
     </div>
-    <div class="hero-btns">
-      <a href="#projects" class="btn btn-primary" data-lang="en">View Projects &rarr;</a>
-      <a href="#projects" class="btn btn-primary" data-lang="kr">프로젝트 보기 &rarr;</a>
-      <a href="https://github.com/ishakdavidk" class="btn btn-ghost" target="_blank">GitHub &nearr;</a>
+    <div class="hero-visual">
+      <canvas id="neuralCanvas" width="400" height="400"></canvas>
     </div>
   </section>
 
@@ -1015,6 +1031,90 @@
       if (e.target.tagName === 'VIDEO' || e.target.tagName === 'IFRAME') e.preventDefault();
     });
   });
+
+  // Neural network animation (desktop only)
+  (function() {
+    const canvas = document.getElementById('neuralCanvas');
+    if (!canvas || window.innerWidth < 769) return;
+    const ctx = canvas.getContext('2d');
+    const W = 400, H = 400;
+    canvas.width = W; canvas.height = H;
+
+    // Create nodes in layers
+    const layers = [3, 5, 6, 5, 3];
+    const nodes = [];
+    const edges = [];
+    const layerGap = W / (layers.length + 1);
+
+    layers.forEach((count, li) => {
+      const x = layerGap * (li + 1);
+      const gap = H / (count + 1);
+      for (let i = 0; i < count; i++) {
+        const node = {
+          x: x + (Math.random() - 0.5) * 8,
+          y: gap * (i + 1) + (Math.random() - 0.5) * 8,
+          r: 4 + Math.random() * 2,
+          layer: li,
+          pulse: Math.random() * Math.PI * 2
+        };
+        nodes.push(node);
+      }
+    });
+
+    // Connect adjacent layers
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = 0; j < nodes.length; j++) {
+        if (nodes[j].layer === nodes[i].layer + 1) {
+          edges.push({ from: i, to: j, signal: Math.random() * Math.PI * 2, speed: 0.3 + Math.random() * 0.7 });
+        }
+      }
+    }
+
+    const primary = [55, 88, 199];
+
+    function draw(t) {
+      ctx.clearRect(0, 0, W, H);
+
+      // Draw edges
+      edges.forEach(e => {
+        const a = nodes[e.from], b = nodes[e.to];
+        const pulse = (Math.sin(t * 0.001 * e.speed + e.signal) + 1) / 2;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.strokeStyle = `rgba(${primary[0]},${primary[1]},${primary[2]},${0.06 + pulse * 0.12})`;
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+
+        // Traveling signal dot
+        const pos = ((t * 0.0003 * e.speed + e.signal) % 1 + 1) % 1;
+        const sx = a.x + (b.x - a.x) * pos;
+        const sy = a.y + (b.y - a.y) * pos;
+        ctx.beginPath();
+        ctx.arc(sx, sy, 1.5, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${primary[0]},${primary[1]},${primary[2]},${0.15 + pulse * 0.25})`;
+        ctx.fill();
+      });
+
+      // Draw nodes
+      nodes.forEach(n => {
+        const pulse = (Math.sin(t * 0.002 + n.pulse) + 1) / 2;
+        // Glow
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r + 6, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${primary[0]},${primary[1]},${primary[2]},${0.03 + pulse * 0.06})`;
+        ctx.fill();
+        // Node
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${primary[0]},${primary[1]},${primary[2]},${0.2 + pulse * 0.3})`;
+        ctx.fill();
+      });
+
+      requestAnimationFrame(draw);
+    }
+    requestAnimationFrame(draw);
+  })();
 </script>
 </body>
 </html>
